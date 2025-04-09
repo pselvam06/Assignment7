@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="https://i.pinimg.com/474x/bc/d2/30/bcd230dd895d131cc84d5dea0dce2fa5.jpg" width="75" height="50"
+                alt="">
+            <a class="navbar-brand p-2" href="#">SP Mobile Shop</a>
+            <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <!-- header -->
+    <div>
+        <h2 class="text-center text-black mt-3">Featured Products</h2>
+    </div>
+    <!--card design-->
+    <div class="container mt-5 bg-secondary p-3 rounded ">
+
+        <div class="row gap-2 justify-content-center">
+
+            <!--Product 1-->
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.pinimg.com/736x/66/f4/10/66f410931032c616396ddad3f96db093.jpg" alt="" height="auto"
+                    width="auto" class="card-img-top mt-2">
+                <div class="card-body text-center">
+                    <h5 class="card-title ">Iphone1</h5>
+                    <p class="card-text ">1325.50$</p>
+                    <p class="card-text ">Sleek design, powerful performance, all-day battery life.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cardModal1">Add to
+                        Cart</button>
+                </div>
+
+            </div>
+
+            <!--Product 2-->
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.pinimg.com/736x/a1/ca/24/a1ca24c04a56dcd7c19dabf9e44c7f7f.jpg" alt="" height="auto"
+                    width="auto" class="card-img-top mt-2">
+                <div class="card-body text-center">
+                    <h5 class="card-title ">Iphone2</h5>
+                    <p class="card-text ">1425.50$</p>
+                    <p class="card-text ">Capture stunning photos with ultra-clear camera technology.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cardModal2">Add to
+                        Cart</button>
+                </div>
+
+            </div>
+
+            <!--Product 3-->
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.pinimg.com/736x/ea/d1/59/ead159e3d0370ca7ae3abbf76f12fdd8.jpg" alt="" height="auto"
+                    width="auto" class="card-img-top mt-2">
+                <div class="card-body text-center">
+                    <h5 class="card-title ">Iphone3</h5>
+                    <p class="card-text ">1525.50$</p>
+                    <p class="card-text ">Fast processor, vivid display, seamless user experience.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cardModal3">Add to
+                        Cart</button>
+                </div>
+
+            </div>
+
+            <!--Product 4-->
+
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.pinimg.com/736x/60/a9/31/60a93165e59daca00ae94a6cbdaea705.jpg" alt="" height="auto"
+                    width="auto" class="card-img-top mt-2">
+                <div class="card-body text-center">
+                    <h5 class="card-title ">Iphone4</h5>
+                    <p class="card-text ">1625.50$</p>
+                    <p class="card-text ">Next-gen smartphone built for speed and style.</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cardModal4">Add to
+                        Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- modal 1-->
+
+    <div class="modal fade" id="cardModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    product1 added to cart successfully!
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal 2-->
+
+    <div class="modal fade" id="cardModal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    product2 added to cart successfully!
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal 3-->
+
+    <div class="modal fade" id="cardModal3" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    product3 added to cart successfully!
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal 4-->
+
+    <div class="modal fade" id="cardModal4" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    product4 added to cart successfully!
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
