@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SP Laptops - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" href="https://i.pinimg.com/736x/a7/16/85/a716858dfcf8629202d40b8fd8de5f74.jpg" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #1e1e1e;
+    }
+
+    .hero-carousel .carousel-item {
+      height: 80vh;
+      min-height: 500px;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, rgb(7, 16, 28) 0%, rgba(57, 65, 4, 0.7) 100%);
+    }
+
+    .navbar {
+      background-color: #0a0a0a !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-brand {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+      color: #0d6efd !important;
+      transform: scale(1.02);
+    }
+
+    .nav-link {
+      position: relative;
+      color: rgba(255, 255, 255, 0.8) !important;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      margin: 0 0.2rem;
+    }
+
+    .nav-link:hover {
+      color: white !important;
+      transform: translateY(-2px);
+    }
+
+    .nav-link.active {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    /* Animated underline effect */
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #0d6efd;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Mobile menu transition */
+    .navbar-collapse {
+      transition: max-height 0.4s ease-out;
+    }
+
+    /* Toggle button animation */
+    .navbar-toggler {
+      transition: transform 0.3s ease;
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+      transform: rotate(90deg);
+    }
+
+    .hero-carousel .carousel-caption {
+      bottom: 40%;
+      transform: translateY(50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .feature-icon i {
+      color: #0d6efd;
+    }
+
+    footer {
+      background-color: #1e1e1e;
+      padding: 20px 0;
+      margin-top: 30px;
+
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      width: 3rem;
+      height: 3rem;
+    }
+
+
+    /* Hover Effects */
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(13, 110, 253, 0.15) !important;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .btn-primary {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
+
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    }
+
+    /* Image fitting */
+    .object-fit-cover {
+      object-fit: scale-down;
+      object-position: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" style="font-size: 2rem;" href="#">
+        <span class="text-white">💻 SP Laptops</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+          class="d-block w-100" alt="Gaming Laptops">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4 fw-bold">Premium Gaming Laptops</h1>
+          <p class="lead">Experience ultimate performance with our latest RTX-powered machines</p>
+          <a href="products.html#gaming" class="btn btn-success btn-lg mt-3">Shop Gaming Laptops</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img
+          src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&q=80"
+          class="d-block w-100" alt="Business Laptops">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4 fw-bold">Professional Business Solutions</h1>
+          <p class="lead">Secure, powerful, and portable - perfect for your business needs</p>
+          <a href="products.html#business" class="btn btn-primary btn-lg mt-3">Explore Business Laptops</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img
+          src="https://images.pexels.com/photos/109371/pexels-photo-109371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          class="d-block w-100" alt="Student Laptops">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4 fw-bold">Student Essentials</h1>
+          <p class="lead">Affordable laptops with all the features students need</p>
+          <a href="products.html#student" class="btn btn-warning btn-lg mt-3">View Student Deals</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Featured Categories -->
+  <section class="py-5" style="background-color: #0a0a0a;">
+    <div class="container text-center">
+      <h2 class="mb-5 fw-bold text-white position-relative">
+        <span class="position-relative">
+          Featured Categories
+          <span class="position-absolute bottom-0 start-50 translate-middle-x bg-primary"
+            style="height: 3px; width: 80px;"></span>
+        </span>
+      </h2>
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-0 overflow-hidden"
+            style="background-color: #1e1e1e; border-radius: 12px; transition: all 0.3s ease;">
+            <div class="image-container" style="height: 200px; overflow: hidden;">
+              <img src="https://i.pinimg.com/736x/66/51/89/665189e6eabf7a0b9fb455c85958ee45.jpg"
+                class="img-fluid w-100 h-100 object-fit-cover" alt="Gaming Laptops"
+                style="transition: transform 0.5s ease;">
+            </div>
+            <div class="card-body d-flex flex-column text-start px-4 pb-4 pt-3">
+              <div class="d-flex align-items-center mb-2">
+                <div class="icon-circle me-2"
+                  style="width: 36px; height: 36px; background-color: rgba(13, 110, 253, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <span style="font-size: 1.2rem;">🎮</span>
+                </div>
+                <h5 class="card-title fw-semibold mb-0" style="color: #ffffff;">Gaming Laptops</h5>
+              </div>
+              <p class="card-text small mb-4" style="color: #b0b0b0;">High-performance laptops for serious gamers and
+                creatives with powerful GPUs and high refresh rate displays.</p>
+              <div class="mt-auto">
+                <a href="products.html#gaming" class="btn btn-primary w-100 py-2"
+                  style="border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
+                  Explore Collection
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-0 overflow-hidden"
+            style="background-color: #1e1e1e; border-radius: 12px; transition: all 0.3s ease;">
+            <div class="image-container" style="height: 200px; overflow: hidden;">
+              <img src="https://i.pinimg.com/736x/8d/66/cb/8d66cb94147d578293974ef8912abfa6.jpg"
+                class="img-fluid w-100 h-100 object-fit-cover" alt="Business Laptops"
+                style="transition: transform 0.5s ease;">
+            </div>
+            <div class="card-body d-flex flex-column text-start px-4 pb-4 pt-3">
+              <div class="d-flex align-items-center mb-2">
+                <div class="icon-circle me-2"
+                  style="width: 36px; height: 36px; background-color: rgba(13, 110, 253, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <span style="font-size: 1.2rem;">💼</span>
+                </div>
+                <h5 class="card-title fw-semibold mb-0" style="color: #ffffff;">Business Laptops</h5>
+              </div>
+              <p class="card-text small mb-4" style="color: #b0b0b0;">Reliable machines built for performance, security,
+                and portability with enterprise-grade features.</p>
+              <div class="mt-auto">
+                <a href="products.html#business" class="btn btn-primary w-100 py-2"
+                  style="border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
+                  Explore Collection
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 border-0 overflow-hidden"
+            style="background-color: #1e1e1e; border-radius: 12px; transition: all 0.3s ease;">
+            <div class="image-container" style="height: 200px; overflow: hidden;">
+              <img src="https://i.pinimg.com/736x/a7/16/85/a716858dfcf8629202d40b8fd8de5f74.jpg"
+                class="img-fluid w-100 h-100 object-fit-cover" alt="Student Laptops"
+                style="transition: transform 0.5s ease;">
+            </div>
+            <div class="card-body d-flex flex-column text-start px-4 pb-4 pt-3">
+              <div class="d-flex align-items-center mb-2">
+                <div class="icon-circle me-2"
+                  style="width: 36px; height: 36px; background-color: rgba(13, 110, 253, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                  <span style="font-size: 1.2rem;">🎓</span>
+                </div>
+                <h5 class="card-title fw-semibold mb-0" style="color: #ffffff;">Student Laptops</h5>
+              </div>
+              <p class="card-text small mb-4" style="color: #b0b0b0;">Affordable and efficient laptops perfect for
+                learning on the go with long battery life and durability.</p>
+              <div class="mt-auto">
+                <a href="products.html#student" class="btn btn-primary w-100 py-2"
+                  style="border-radius: 8px; font-weight: 500; transition: all 0.3s ease;">
+                  Explore Collection
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Features Section -->
+  <section class="py-5 bg-dark text-white" style="border-radius: 10px;">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-shield-alt fa-3x"></i>
+          </div>
+          <h4>2-Year Warranty</h4>
+          <p class="mb-0">All our laptops come with a comprehensive 2-year manufacturer warranty for peace of mind.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-truck fa-3x"></i>
+          </div>
+          <h4>Free Shipping</h4>
+          <p class="mb-0">Free delivery on all orders over $500 with next-day delivery available for most locations.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="feature-icon mb-3">
+            <i class="fas fa-undo fa-3x"></i>
+          </div>
+          <h4>30-Day Returns</h4>
+          <p class="mb-0">Not satisfied? Return within 30 days for a full refund, no questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-white">
+    <div class="container">
+      <div class="mb-3">
+        <a href="#" class=" mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class=" mx-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class=" mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class=" mx-2"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="mb-1">&copy; 2025 SP Laptops. All rights reserved.</p>
+      <small class="text-white">
+        <a href="#" class=" text-decoration-none">Privacy Policy</a> |
+        <a href="#" class=" text-decoration-none">Terms of Service</a> |
+        <a href="#" class=" text-decoration-none">Sitemap</a>
+      </small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Enable carousel auto-cycling
+    document.addEventListener('DOMContentLoaded', function () {
+      var myCarousel = new bootstrap.Carousel(document.getElementById('heroCarousel'), {
+        interval: 5000, // Change slide every 5 seconds
+        wrap: true, // Enable continuous cycling
+        pause: 'hover' // Pause on hover
+      });
+    });
+  </script>
+</body>
+
+</html>

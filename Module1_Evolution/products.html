@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Laptops - Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="https://i.pinimg.com/736x/a7/16/85/a716858dfcf8629202d40b8fd8de5f74.jpg" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, rgb(7, 16, 28) 0%, rgba(57, 65, 4, 0.7) 100%);
+        }
+
+        .navbar {
+            background-color: #0a0a0a !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #0d6efd !important;
+            transform: scale(1.02);
+        }
+
+        .nav-link {
+            position: relative;
+            color: rgba(255, 255, 255, 0.8) !important;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            margin: 0 0.2rem;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        /* Animated underline effect */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0d6efd;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Mobile menu transition */
+        .navbar-collapse {
+            transition: max-height 0.4s ease-out;
+        }
+
+        /* Toggle button animation */
+        .navbar-toggler {
+            transition: transform 0.3s ease;
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+            transform: rotate(90deg);
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: contain;
+            padding: 15px;
+            background-color: #1e1e1e;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .category-header {
+            font-family: 'Segoe UI', sans-serif;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .category-header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(13, 110, 253, 1) 0%, rgba(255, 255, 255, 0.7) 100%);
+            border-radius: 3px;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 10px;
+            color: #e0e0e0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid #0d6efd;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-tag {
+            font-size: 1.2rem;
+            color: #4CAF50;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+
+        .container.mt-4 {
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            border: 1px solid #333;
+        }
+
+        .modal-content {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        .modal-header,
+        .modal-footer {
+            border-color: #333;
+        }
+
+        .btn-close {
+            filter: invert(1);
+        }
+
+        .navbar {
+            background-color: #0a0a0a !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .description {
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" style="font-size: 2rem;" href="#">Buy Online SP Laptops</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 p-4 rounded shadow bg-gradient">
+        <h2 class="text-center mt-2 mb-0 fw-bold text-primary"
+            style="font-family: 'Segoe UI', sans-serif; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+            🛒 Our Featured Products
+        </h2>
+        <p class="text-center mt-2" style="font-size: 1.1rem; color: #b0b0b0; font-family: 'Segoe UI', sans-serif;">
+            Discover our exclusive range of products that cater to your needs. Shop now and enjoy great deals!
+        </p>
+    </div>
+
+    <!-- Product Categories -->
+    <div class="container p-3 rounded ">
+        <div class="row gap-2 justify-content-center">
+
+            <!-- Gaming Laptops -->
+            <div class="container mt-1 p-3 rounded text-center my-5">
+                <h3 class="fw-bold text-primary category-header">
+                    🎮 Gaming Laptops
+                </h3>
+                <div class="row justify-content-center g-4 mt-3">
+                    <!--Product 1-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/1f/47/d7/1f47d75a5c0581c45e5f1912cb1a70a2.jpg"
+                                alt="Alienware m15 R7" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">The Alienware m15 R7 Gaming Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$13,250.50</p>
+                                <p class="card-text description">High-performance laptop designed for gaming enthusiasts
+                                    with cutting-edge specs.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 2-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/58/ec/a1/58eca1fdedcb1a91aebbe590bccee0ce.jpg"
+                                alt="HP Victus Gaming" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">HP Victus Gaming 12th Gen Intel Core i7</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,399.00</p>
+                                <p class="card-text description">FHD IPS display with 178-degree wide-viewing angles for
+                                    vibrant, crystal-clear images.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 3-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/59/63/d7/5963d714fd48fc2bafe7f5a84ec959e5.jpg"
+                                alt="Lenovo Legion 5i" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Lenovo Legion 5i Gaming Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,525.50</p>
+                                <p class="card-text description">Powerhouse gaming laptop with i9-14900HX processor and
+                                    RTX4060 graphics.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 4-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/59/df/8f/59df8fc0de7f3766ad33a573d8ae9e11.jpg"
+                                alt="MSI Raider GE77Hx" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">MSI Raider GE77Hx 17.3" QHD</h5>
+                                <p class="card-text fw-bold text-success price-tag">$4,700.00</p>
+                                <p class="card-text description">Intel Core i9-12900HX, RTX3080TI, 32GB DDR5, 1TB NVMe
+                                    SSD, Win11PRO.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Laptops -->
+            <div class="container mt-1 p-3 rounded text-center my-5">
+                <h3 class="fw-bold text-primary category-header">
+                    💼 Business Laptops
+                </h3>
+                <div class="row justify-content-center g-4 mt-3">
+                    <!--Product 5-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/95/47/1a/95471a9f977bce08a7d4620f507c5157.jpg"
+                                alt="Dell Latitude 7490" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Dell Latitude 7490 Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">Intel Core i5-8350U, 16GB DDR4 RAM, 512GB SSD, 14" FHD
+                                    (1920x1080) display.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 6-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/d5/c1/6c/d5c16cc09cf71d27c677d6cee8ed918e.jpg"
+                                alt="HP EliteBook 840 G6" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">HP EliteBook 840 G6 14" Touchscreen</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">Intel i7-8665U, 16GB RAM, 512GB SSD, Windows 11.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 7-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/96/5e/af/965eaffdb00d96b40def12c13c0aaa2c.jpg"
+                                alt="ThinkPad E16 Gen 1" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">ThinkPad E16 Gen 1 Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">16-Inch display, Core i7-1355U, 16GB RAM, 512GB SSD for
+                                    professional use.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal1">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 8-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/dd/53/4a/dd534a8100a1db49c78dc3984f88df51.jpg"
+                                alt="Acer Aspire Laptop" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Acer 15.6" Aspire Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">Intel Core i7-1165G7, 12GB RAM, powerful processors in
+                                    a fashionable design.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Laptops -->
+            <div class="container mt-1 p-3 rounded text-center my-5">
+                <h3 class="fw-bold text-primary category-header">
+                    🎓 Student Laptops
+                </h3>
+                <div class="row justify-content-center g-4 mt-3">
+                    <!--Product 9-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/b4/d8/08/b4d808481aa7b61c734dd789b52dcaaf.jpg"
+                                alt="Dell XPS 13" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Dell XPS 13 Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">Ultra-thin design with Copilot+, Snapdragon X Elite
+                                    CPU, Windows 11 ARM.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 10-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/1200x/bf/c7/58/bfc75872334b94adc7e496da702577d8.jpg"
+                                alt="HP 14 Student Laptop" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">HP 14" Student Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">Intel Core N4120, Up to 16GB RAM, Up to 384GB Storage,
+                                    1-Year Office 365.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 11-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/736x/25/09/fd/2509fd7b936e9bc8e7e0f515fa46d8a5.jpg"
+                                alt="Lenovo IdeaPad 1" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Lenovo IdeaPad 1 Student Laptop</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">Intel Dual Core Processor, boost your productivity with
+                                    this 2-in-1 device.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Product 12-->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 d-flex flex-column">
+                            <img src="https://i.pinimg.com/1200x/4f/b6/d0/4fb6d0ad59e750c0d6957739fb7c7a6d.jpg"
+                                alt="Acer Aspire Lite" class="card-img-top mt-2">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Acer Aspire Lite 15.6-inch</h5>
+                                <p class="card-text fw-bold text-success price-tag">$1,325.50</p>
+                                <p class="card-text description">i7-1165G7, 512GB/16GB, W11H with powerful performance
+                                    and ultra-clear display.</p>
+                                <button class="btn btn-primary mt-auto" data-bs-toggle="modal"
+                                    data-bs-target="#cardModal">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="cardModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Success!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green"
+                            class="bi bi-check-circle-fill me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                        <span>Item added to cart successfully!</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                    <button class="btn btn-primary">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="cardModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Success!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green"
+                            class="bi bi-check-circle-fill me-2" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                        </svg>
+                        <span>Item added to cart successfully!</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                    <button class="btn btn-primary">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Footer -->
+    <footer class="text-center bg-dark text-white mt-5">
+        <div class="container py-4">
+            <p class="mb-1">&copy; 2025 SP Laptops. All rights reserved.</p>
+            <small>
+                <a href="#" class="text-white text-decoration-none">Privacy Policy</a> |
+                <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+            </small>
+        </div>
+    </footer>
+
+</body>
+
+</html>
