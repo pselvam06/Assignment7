@@ -1,28 +1,28 @@
-let n = 5; 
-  // Upper half of the diamond
-  for (let i = 1; i <= n; i++) {
-    let row = '';
-    // Spaces
-    for (let j = n; j > i; j--) {
-      row += ' ';
+function printDiamond() {
+  const rows = parseInt(document.getElementById("rows").value);
+  let output = "";
+
+  // Upper part
+  for (let i = 1; i <= rows; i++) {
+    for (let j = 1; j <= rows - i; j++) {
+      output += " ";
     }
-    // Stars
     for (let k = 1; k <= 2 * i - 1; k++) {
-      row += '*';
+      output += "*";
     }
-    console.log(row);
+    output += "\n";
   }
 
-  // Lower half of the diamond
-  for (let i = n - 1; i >= 1; i--) {
-    let row = '';
-    // Spaces
-    for (let j = n; j > i; j--) {
-      row += ' ';
+  // Lower part
+  for (let i = rows - 1; i >= 1; i--) {
+    for (let j = 1; j <= rows - i; j++) {
+      output += " ";
     }
-    // Stars
     for (let k = 1; k <= 2 * i - 1; k++) {
-      row += '*';
+      output += "*";
     }
-    console.log(row);
+    output += "\n";
   }
+
+  document.getElementById("output").textContent = output;
+}

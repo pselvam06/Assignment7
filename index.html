@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Diamond Pattern</title>
 </head>
 <body>
-    <script src="script.js"></script>
+
+<h2>Diamond Pattern Generator</h2>
+<label for="rows">Enter number of rows (half of diamond): </label>
+<input type="number" id="rows" min="1" />
+<button onclick="printDiamond()">Generate</button>
+
+<pre id="output"></pre>
+
+<script src="script.js"></script>
+
 </body>
 </html>
