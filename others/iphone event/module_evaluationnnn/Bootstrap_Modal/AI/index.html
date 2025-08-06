@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Employee AI Assistant</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .ai-header {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+        }
+        
+        .chat-container {
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .message-area {
+            height: 400px;
+            overflow-y: auto;
+        }
+        
+        .user-message {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 18px 18px 0 18px;
+        }
+        
+        .ai-message {
+            background-color: #e9ecef;
+            border-radius: 18px 18px 18px 0;
+        }
+        
+        .suggestion-chip {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .suggestion-chip:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body style="background-color: #f8f9fa;">
+    <!-- Header -->
+    <header class="ai-header py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1><i class="fas fa-robot me-2"></i>Employee AI Assistant</h1>
+                    <p class="mb-0">Get instant answers to your insurance domain questions</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="badge bg-light text-dark">Beta</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5 ">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Chat Interface -->
+                <div class="chat-container bg-white p-4">
+                    <div class="message-area mb-3 p-3" id="chatArea">
+                        <!-- AI Welcome Message -->
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0 me-2">
+                                <div class="bg-primary text-white rounded-circle p-2" style="width: 36px; height: 36px;">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                            <div class="ai-message p-3 rounded">
+                                <p class="mb-0">Hello! I'm your AI HR assistant. How can I help you with insurance policies, claims, or benefits today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Suggestions -->
+                    <div class="suggestions mb-3">
+                        <p class="text-muted small mb-2">Try asking:</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="suggestion-chip badge bg-light text-dark p-2 rounded-pill">What's our dental coverage?</span>
+                            <span class="suggestion-chip badge bg-light text-dark p-2 rounded-pill">How do I file a claim?</span>
+                            <span class="suggestion-chip badge bg-light text-dark p-2 rounded-pill">What's the PTO policy?</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Input Area -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="userInput" placeholder="Ask about insurance policies, claims, benefits...">
+                        <button class="btn btn-primary" id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- HR Resources -->
+                <div class="mt-5 py-4 ">
+                    <h5 class="mb-3">HR Resources</h5>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6><i class="fas fa-file-contract me-2 text-primary"></i>Policy Documents</h6>
+                                    <p class="small text-muted">Access all insurance policy PDFs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6><i class="fas fa-video me-2 text-primary"></i>Training Videos</h6>
+                                    <p class="small text-muted">Learn about benefits enrollment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6><i class="fas fa-headset me-2 text-primary"></i>Live Support</h6>
+                                    <p class="small text-muted">Connect with HR representative</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>RS Insurance </h5>
+                    <p>AI-powered employee support system</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2023 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AI Chat Simulation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatArea = document.getElementById('chatArea');
+            const userInput = document.getElementById('userInput');
+            const sendButton = document.getElementById('sendButton');
+            const suggestionChips = document.querySelectorAll('.suggestion-chip');
+            
+            // Add sample questions to input when clicked
+            suggestionChips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    userInput.value = this.textContent;
+                });
+            });
+            
+            // Handle sending messages
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message === '') return;
+                
+                // Add user message to chat
+                addMessageToChat(message, 'user');
+                userInput.value = '';
+                
+                // Simulate AI thinking
+                setTimeout(() => {
+                    const aiResponse = generateAIResponse(message);
+                    addMessageToChat(aiResponse, 'ai');
+                }, 1000);
+            }
+            
+            // Send message on button click or Enter key
+            sendButton.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Add message to chat area
+            function addMessageToChat(message, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `d-flex mb-3 ${sender === 'user' ? 'justify-content-end' : ''}`;
+                
+                messageDiv.innerHTML = `
+                    ${sender === 'ai' ? `
+                    <div class="flex-shrink-0 me-2">
+                        <div class="bg-primary text-white rounded-circle p-2" style="width: 36px; height: 36px;">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    ` : ''}
+                    <div class="${sender === 'user' ? 'user-message' : 'ai-message'} p-3 rounded">
+                        <p class="mb-0">${message}</p>
+                    </div>
+                    ${sender === 'user' ? `
+                    <div class="flex-shrink-0 ms-2">
+                        <div class="bg-secondary text-white rounded-circle p-2" style="width: 36px; height: 36px;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    ` : ''}
+                `;
+                
+                chatArea.appendChild(messageDiv);
+                chatArea.scrollTop = chatArea.scrollHeight;
+            }
+            
+            // Simple AI response generator (in real app, connect to AI API)
+            function generateAIResponse(question) {
+                const responses = {
+                    "dental coverage": "Our dental plan covers 100% of preventive care, 80% of basic procedures, and 50% of major work. Annual maximum is $1,500 per employee.",
+                    "file a claim": "To file an insurance claim: 1) Log into our portal 2) Select 'New Claim' 3) Upload required documents 4) Submit. Claims are processed within 5-7 business days.",
+                    "pto policy": "Full-time employees accrue 15 days PTO annually. Unused PTO rolls over up to 5 days. Manager approval required for blocks over 5 consecutive days.",
+                    "default": "I can help with questions about health insurance, dental coverage, vision plans, retirement benefits, and claims processing. Could you please clarify your question?"
+                };
+                
+                question = question.toLowerCase();
+                
+                if (question.includes("dental")) return responses["dental coverage"];
+                if (question.includes("claim")) return responses["file a claim"];
+                if (question.includes("pto") || question.includes("vacation")) return responses["pto policy"];
+                
+                return responses["default"];
+            }
+        });
+    </script>
+</body>
+</html>

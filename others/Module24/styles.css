@@ -1,0 +1,97 @@
+/* style.css */
+
+/* Body & Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://source.unsplash.com/1600x600/?travel') center/cover no-repeat;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    padding: 80px 0;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* Form */
+form .form-label {
+    font-weight: 600;
+}
+
+form .form-control:focus {
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    border-color: #0d6efd;
+}
+
+.add-place-btn, .remove-place-btn {
+    min-width: 45px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* Booking Summary */
+#bookingSummary {
+    background-color: #fff;
+    border-radius: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#bookingSummary h3 {
+    color: #198754;
+}
+
+#bookingSummary ul {
+    padding-left: 1rem;
+}
+
+#bookingSummary li {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 20px;
+    margin: 0;
+    display: flex;
+}
+
+nav h1 {
+    font-size: 30px;
+    display: flex;
+    padding: 10px;
+    
+    
+}
+
+nav ul {
+    display: flex;  
+    margin-left: 5px;
+    list-style: none;
+    justify-self: center;
+    align-items:  center;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;  
+ 
+  
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.herosection {
+    background-image: url('https://i.pinimg.com/736x/32/79/e2/3279e2a942198348445e53e77e8805a5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: azure;
+}
+
+.box {
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 20px auto;
+    width: 250px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+      
+}
+
+
+.product-box    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: goldenrod;
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+
+.product-image {
+       width: 100%;
+    max-height: 200px;
+   border-radius: 8px;
+
+}
+
+.product-title{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 50px;
+    
+}
+
+.product-price {
+    font-size: 14px;
+    color: blue;
+    font-weight: bold;
+}
+
+button{
+    padding: 8px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    margin: 10px;
+}
+
+

@@ -1,0 +1,59 @@
+ body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.product{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#cart{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+}
+ 
+ 
+ .brand-header {
+            background-color: #111;
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x400?text=Nike');
+            background-size: cover;
+            background-position: center;
+        }
+        .product-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .product-img {
+            height: 200px;
+            object-fit: contain;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .nike-btn {
+            background-color: #000;
+            border-color: #000;
+        }
+        .nike-btn:hover {
+            background-color: #333;
+            border-color: #333;
+        }

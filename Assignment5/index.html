@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Insta Mart</h1>
+        <div class="menu-icon" onclick="togglemenu()">≣</div>
+        <div class="menu" id="menu">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+    <div class="herosection">
+        <img src="https://i.pinimg.com/736x/b6/d3/ed/b6d3ed14e86fa601c03ec89e054d8811.jpg" alt="">
+    </div>
+    <div class="boxes">
+        
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/b3/40/45/b34045c53804ad9f055e205b1a4e736d.jpg" alt="">
+            <h3>Vegitables</h3>
+            <p>Starts From $30</p>
+        </div>
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/43/59/6e/43596eff912d43b824a741bdb9366542.jpg" alt="">
+            <h3>Fruits</h3>
+            <p>Starts From $50</p>
+        </div>
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/ac/00/1a/ac001a4f86bfb6d4f04bdd1e83805af8.jpg" alt="">
+            <h3>Snacks</h3>
+            <p>Starts From $15</p>
+        </div>
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/c4/95/33/c49533b6ec704c2e38eafdfe2703c211.jpg" alt="">
+            <h3>Cool Drinks</h3>
+            <p>Starts From $20</p>
+        </div>
+        <div class="products">
+            <img src="https://i.pinimg.com/736x/95/84/9c/95849cdeb84425e3e5538f0498d02836.jpg" alt="">
+            <h3>Milk Products</h3>
+            <p>Starts From $35</p>
+        </div>
+    </div>
+    <script>
+        function togglemenu() {
+            document.getElementById("menu").classList.toggle("show")
+        }
+    </script>
+</body>
+
+</html>

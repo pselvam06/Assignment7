@@ -1,0 +1,40 @@
+body{
+    background-image: "https://i.pinimg.com/474x/15/37/63/15376370ebf1b66f70ce9d7d7a8dd206.jpg";
+   background-size: cover;
+   background-position: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color:black;
+}
+
+header{
+    background: green;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     position: fixed;
+    top: 0;
+    width: 100%;
+   }
+
+h1{
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+section{
+    padding: 50px;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+}

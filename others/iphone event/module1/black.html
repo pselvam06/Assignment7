@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your One-Stop Online Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 30px;
+        }
+        
+        .category-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-card {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .badge-discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ShopEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-user"></i></a>
+                    <a href="#" class="btn btn-outline-primary position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Summer Sale is Live!</h1>
+            <p class="lead mb-5">Up to 50% off on selected items. Limited time offer.</p>
+            <a href="#" class="btn btn-primary btn-lg px-4 me-2">Shop Now</a>
+            <a href="#" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-5">Shop by Category</h2>
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <div class="card category-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Electronics">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Electronics</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card category-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Fashion">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fashion</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card category-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Home & Garden">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Home & Garden</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="card category-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Beauty">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Beauty</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Featured Products</h2>
+            <a href="#" class="btn btn-outline-primary">View All</a>
+        </div>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card product-card">
+                    <span class="badge bg-danger badge-discount">-20%</span>
+                    <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Wireless Headphones</h5>
+                        <p class="text-muted">Electronics</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-danger fw-bold">$79.99</span>
+                                <span class="text-decoration-line-through text-muted ms-2">$99.99</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Watch</h5>
+                        <p class="text-muted">Electronics</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$149.99</span>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card product-card">
+                    <span class="badge bg-danger badge-discount">-15%</span>
+                    <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Running Shoes</h5>
+                        <p class="text-muted">Fashion</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-danger fw-bold">$67.99</span>
+                                <span class="text-decoration-line-through text-muted ms-2">$79.99</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-4 col-6">
+                <div class="card product-card">
+                    <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Blender</h5>
+                        <p class="text-muted">Home & Kitchen</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">$49.99</span>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="container mb-5">
+        <div class="bg-primary text-white p-5 rounded-3">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2>Special Weekend Offer</h2>
+                    <p class="lead">Get an extra 10% off on all orders above $100. Use code WEEKEND10 at checkout.</p>
+                    <a href="#" class="btn btn-light">Shop Now</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://via.placeholder.com/200x200" alt="Special Offer" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text">"Great products and fast delivery! I'm very satisfied with my purchase."</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/50x50" class="rounded-circle me-3" alt="Customer">
+                            <div>
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <small class="text-muted">Verified Buyer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="card-text">"Excellent customer service. They helped me choose the perfect gift for my wife."</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/50x50" class="rounded-circle me-3" alt="Customer">
+                            <div>
+                                <h6 class="mb-0">Michael Brown</h6>
+                                <small class="text-muted">Verified Buyer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-text">"The quality of products exceeded my expectations. Will definitely shop here again!"</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/50x50" class="rounded-circle me-3" alt="Customer">
+                            <div>
+                                <h6 class="mb-0">Emily Davis</h6>
+                                <small class="text-muted">Verified Buyer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-light py-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p class="lead mb-4">Get the latest updates on new products and upcoming sales</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-8">
+                            <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>ShopEase</h5>
+                    <p>Your one-stop online shop for all your needs. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Products</a>
+                        <a href="#">Categories</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Customer Service</h5>
+                    <div class="footer-links">
+                        <a href="#">FAQs</a>
+                        <a href="#">Shipping Policy</a>
+                        <a href="#">Return Policy</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 123 Main Street, City, Country</p>
+                        <p><i class="fas fa-phone me-2"></i> +1 234 567 890</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@shopease.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 ShopEase. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <img src="https://via.placeholder.com/200x30" alt="Payment Methods" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

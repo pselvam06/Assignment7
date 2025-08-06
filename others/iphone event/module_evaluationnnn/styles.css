@@ -1,0 +1,94 @@
+body {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .hero {
+    background: url('https://images.samsung.com/is/image/samsung/assets/in/multistore/21851_Offer-tile-1440x344-22-08-2024.jpg?$1440_N_JPG$') center center/cover no-repeat;
+    color: black;
+    height: 50vh;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;     
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+   
+  }
+
+ 
+  .hero h1 {
+    font-size: 2rem;      
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+    @media (max-width: 790px) {
+        .hero {
+          height: auto;
+          padding: 30px 20px;
+          justify-content: center;
+          text-align: left;
+        }
+      
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+      
+        .hero p {
+          font-size: 1.1rem;
+        }
+      
+        .hero .container {
+          max-width: 100%;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.5rem;
+        }
+      
+        .hero p {
+          font-size: 1rem;
+        }
+    }
+  
+
+  .categories img {
+    transition: transform 0.3s ;
+    height: 180px;
+    object-fit: scale-down;
+  }
+
+
+  .hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+  
+footer {
+    background-color: lightblue;
+    color: black;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+ 
+
+a.text-white:hover {
+    text-decoration: underline;
+  }
+
+
+ 
